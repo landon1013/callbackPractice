@@ -18,7 +18,7 @@ and what you should write is the favNum function that makes the code above work,
 
    var favoriteNumber = 13;
    favNum(favoriteNumber, function(){
-      console.log('My favorite number is ', + 13);
+      console.log('My favorite number is ', + favoriteNumber);
    });
     
     
@@ -33,7 +33,9 @@ first(names, function(firstName){
   console.log('The first name in names is ', firstName)
 });
 
-
+var first = function(name, cb){
+  cb(name[0]);
+}
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
@@ -47,7 +49,9 @@ last(names, function(lastName){
   console.log('The last name in names is ', lastName);
 });
 
-
+var last = function(name, cb){
+  cb(name[name.length - 1])
+}
 
 
 
@@ -64,7 +68,9 @@ multiply(4, 3, function(answer){
   console.log('The answer is ', answer); //should console.log 12
 })
 
-
+var multiply = function(num1, num2, cb){
+  return answer = num1 * num2;
+}
 
 
 
@@ -85,7 +91,9 @@ contains(names, 'Colt', function(yes){
   }
 });
 
-
+var contains = function(names, string, cb) {
+  
+}
 
 
 
